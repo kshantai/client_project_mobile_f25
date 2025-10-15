@@ -76,5 +76,18 @@ img[src*="UMSI_CampusFall_UMSIBackpack_02"] {
   text-decoration: underline;
 }
 
+a {
+  color: #00274C; /* UM dark blue */
+  text-decoration: underline; /* ensures links stand out */
+}
+
+a:hover,
+a:focus {
+  color: #FFCB05; /* UM maize */
+  text-decoration: none;
+  border-bottom: 2px solid #FFCB05;
+  outline: none;
+}
+
 
 
