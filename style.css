@@ -1,0 +1,80 @@
+/* ----------------------------------------------
+   Images & Responsive Embeds
+   ---------------------------------------------- */
+
+/* Global image responsiveness */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #00274C;  /* Michigan Blue */
+  color: white;
+  padding: 8px 12px;
+  z-index: 100;
+  transition: top 0.3s;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Specific styling for U-M logo in header */
+header img[src*="UMSI_signature_vertical_informal_solidblue"] {
+  max-width: 150px;   /* keeps logo small and consistent */
+  height: auto;
+  margin: 0 auto 1rem auto;
+}
+
+/* Specific styling for the campus hero image */
+img[src*="UMSI_CampusFall_UMSIBackpack_02"] {
+  border-radius: 8px;           /* subtle rounding for modern feel */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);  /* light shadow for depth */
+}
+img[src*="UMSI_CampusFall_UMSIBackpack_02"] {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.grid-item {
+  background-color: #f6f6f6;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.grid-item ul {
+  margin-top: 0.5rem;
+}
+
+.grid-item a {
+  display: block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.grid-item a:hover {
+  text-decoration: underline;
+}
+
+
+
