@@ -1,0 +1,204 @@
+/* --------------------------------------------------
+   RESET + BASE
+-------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* --------------------------------------------------
+   BODY / TYPOGRAPHY
+-------------------------------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #1A1A1A;
+  background-color: #FFFFFF;
+}
+
+h1, h2, h3 {
+  color: #00274C; /* Michigan Blue */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------
+   HEADER + NAVIGATION
+-------------------------------------------------- */
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+header img {
+  max-width: 150px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #00274C;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Highlight Current Page (Accessibility Requirement) */
+.current-page {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* --------------------------------------------------
+   SKIP LINK (ACCESSIBILITY)
+-------------------------------------------------- */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: #FFCB05; /* Maize */
+  color: #00274C; /* Blue */
+  padding: 8px 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: top 0.3s;
+  z-index: 1000;
+}
+.skip-link:focus {
+  top: 10px;
+}
+
+/* --------------------------------------------------
+   IMAGES
+-------------------------------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Campus Hero Image */
+img[src*="UMSI_CampusFall_UMSIBackpack_02"] {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  margin: 1rem auto;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* --------------------------------------------------
+   RESOURCE GRID (MOBILE-FIRST)
+-------------------------------------------------- */
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.grid-item {
+  background-color: #F6F6F6;
+  padding: 1rem;
+  border: 1px solid #D1D1D1;
+}
+
+/* Resource Links */
+.grid-item a {
+  text-decoration: none;
+  color: #00274C;
+  font-weight: 600;
+}
+
+.grid-item a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+  text-align: center;
+  background-color: #00274C;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #FFCB05;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------
+   DESKTOP / TABLET VIEW
+-------------------------------------------------- */
+@media (min-width: 800px) {
+
+  /* Center main page content neatly */
+  body, header, nav, main, footer {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Expand spacing in header */
+  header {
+    padding-top: 2rem;
+  }
+
+  /* Convert the FIRST section in each page into 2 columns */
+  main > section:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 2rem 1rem;
+  }
+
+  /* Desktop Resource Grid (3 columns) */
+  .grid-section {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  /* Unique Feature: Hover Lift Cards */
+  .grid-item {
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border: 1px solid #D1D1D1;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .grid-item:hover {
+    transform: translateY(-6px);
+    border-color: #00274C;
+  }
+}
