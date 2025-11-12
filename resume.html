@@ -7,13 +7,13 @@
 </head>
 <body>
 
-    <header>
-  <a href = "">Skip to Main Content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+<header>
         <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
   <nav>
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="resume.html">Resumes</a></li>
+    <li><a href="resume.html" class="current-page">Resumes</a></li>
     <li><a href="networking.html">Networking & Connections</a></li>
     <li><a href="resources.html">Resources</a></li>
   </ul>
@@ -22,7 +22,7 @@
         <h1>Resume Support</h1>
 
     </header>
-<main id="main">
+<main id="main-content">
   
   <section>
     <h2>Craft a Resume that Tells Your Story</h2>
@@ -112,7 +112,9 @@
           <!-- Content taken & modified from UMGPT with the prompt, "for the same content write me some intro content and resources for a resume page" - this was after I had asked for content for the home page.
         UMGPT. (2025). UMGPT (GPT-4.1 August 25th version) [Large language model]. -->
 
-<div>[Enter more of your own content here - that includes changing the  content of this page from Academic support to something else!]</div>
+<div>At the University of Michigan School of Information, every student brings unique experiences and perspectives to the table. 
+    This space is dedicated to helping you recognize your strengths, identify opportunities for growth, and build confidence in your voice as a professional. 
+  </div>
 
     
         <div></div>
@@ -120,10 +122,12 @@
         <div></div>
         <div></div>
     </main>
-    <footer>
-        <p>University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
-        </footer>
-    
-</body>
+      <footer>
+    <p>© <span id="year"></span> University of Michigan School of Information |
+      <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a>
+    </p>
+  </footer>
 
+  <script src="js/footer.js"></script>
+</body>
 </html>
